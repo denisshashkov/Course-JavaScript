@@ -22,14 +22,13 @@ function isAllTrue(array, fn) {
   } else if (typeof fn !== 'function') {
     throw new Error('fn is not a function');
   }
-  for (const el of array) {
-    if (!fn(el)) {
+  for (let i = 0; i < array.length; i++) {
+    if (!fn(array[i], i, array)) {
       return false;
     }
   }
   return true;
 }
-
 /*
  Задание 2:
 
@@ -52,8 +51,8 @@ function isSomeTrue(array, fn) {
   } else if (typeof fn !== 'function') {
     throw new Error('fn is not a function');
   }
-  for (const el of array) {
-    if (fn(el)) {
+  for (let i = 0; i < array.length; i++) {
+    if (fn(array[i], i, array)) {
       return true;
     }
   }
