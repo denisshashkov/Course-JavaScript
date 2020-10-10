@@ -70,8 +70,7 @@ filterNameInput.addEventListener('input', function () {
 addButton.addEventListener('click', () => {
   const name = encodeURIComponent(addNameInput.value.trim());
   const value = encodeURIComponent(addValueInput.value.trim());
-  addNameInput.value = '';
-  addValueInput.value = '';
+
   if (!name) {
     return;
   }
