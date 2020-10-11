@@ -67,7 +67,7 @@ filterNameInput.addEventListener('input', function () {
   updateTable();
 });
 
-addButton.addEventListener('click', () => {
+addButton.addEventListener('click', function () {
   const name = encodeURIComponent(addNameInput.value.trim());
   const value = encodeURIComponent(addValueInput.value.trim());
 
